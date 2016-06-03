@@ -15,13 +15,17 @@ import { iTodo } from './todo.service' ;
 export class TodoItemComponent {
     private todo : iTodo ;
     @Output() addTodo = new EventEmitter() ;
-    
-    constructor(){
-        this.todo = <iTodo>{title:"", completed:false}
+
+    constructor() {
+        this.todo = <iTodo>{title: "", completed: false};
+    }
+
+    add(todo: iTodo) {
+        this.addTodo.emit(todo) ;
+        this.todo = <iTodo>{title: "", completed: false};
     }
     
-    add(todo:iTodo){
-        this.addTodo.emit(todo) ;
-        this.todo = <iTodo>{title:"", completed:false}
+    getTodo(){
+        return  this.todo;
     }
 }

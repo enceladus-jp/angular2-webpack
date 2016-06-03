@@ -13,6 +13,19 @@ module.exports = webpackMerge(commonConfig, {
     chunkFilename: '[id].chunk.js'
   },
 
+  module: {
+    // ここでTypescriptのTsLintを設定
+    preLoaders: [{
+      test: /\.ts(x?)$/,
+      exclude: /(node_modules|bower_components)/,
+      include: __dirname,
+      loader: 'tslint'
+    }],
+/*    preLoaders: [
+      loaders.tslint,
+    ],*/
+  },
+
   plugins: [
     new ExtractTextPlugin('[name].css')
   ],
