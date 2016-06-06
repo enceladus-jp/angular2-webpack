@@ -1,7 +1,7 @@
 'use strict';
 
-//const loaders = require('./webpack/loaders');
-//const webpack = require('webpack');
+const loaders = require('./webpack/loaders');
+const webpack = require('webpack');
 
 // Karma configuration
 // Generated on Thu Jun 02 2016 15:12:41 GMT+0900 (JST)

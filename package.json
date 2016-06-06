@@ -9,7 +9,7 @@
     "test:watch": "karma start --singleRun false --restartOnFileChange true",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install",
-    "lint-ts": "tslint './src/**/*.ts'"
+    "lint-ts": "tslint --force './src/**/*.ts'"
   },
   "repository": {
     "type": "git",
